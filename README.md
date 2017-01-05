@@ -1,24 +1,16 @@
-# README
+# Aluno Acadêmico | Dúvidas Acadêmicas
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-----------------------------
 
-Things you may want to cover:
+***App criado para tirar esclarecer dúvidas referentes a vida Acadêmica***
 
-* Ruby version
+* Faça login via Redes Sociais ( Facebook, Google e Twitter )
 
-* System dependencies
+* Faça suas perguntas
 
-* Configuration
+* Deixe comentários referente as respostadas dadas pelos ADMS
 
-* Database creation
+---------------------------------
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## App em Desenvolvimento...
