@@ -20,7 +20,7 @@ body{
 
 	.nav{
 		width: 100%;
-		max-width: 480px;
+		max-width: 510px;
 		float: right;
 	}
 	ul.nova-pergunta{
@@ -33,9 +33,14 @@ body{
 			.link-nav-nova{
 				text-decoration: none;
 				color: $cor-base;
-				background-color: #218b58;
+				background-color: lighten(#218b58, 10%);
+				
 				padding: 5px 25px;
 				border-radius: 20px;
+				transition: all ease-in-out .3s;
+				&:hover{
+					background-color: #218b58;
+				}
 			}
 		}
 	}
@@ -52,9 +57,9 @@ body{
 	
 	.navigation{
 		float: left;
-		/*display: inline-block;
 		padding: 0 0 0 5px;
-		line-height: 30px*/;
+		display: inline-block;		
+		line-height: 30px;
 		
 
 
@@ -127,6 +132,11 @@ body{
 			font-size: 65px;
 			color: $cor-principal;
 			margin: 0 0 1.8rem;
+			&::selection{
+				background-color: $cor-principal;
+				padding: 10px;
+				color: $cor-base;
+			}
 		}
 
 		.botao-home-cadastrar{
@@ -164,3 +174,93 @@ body{
 
    }
  }
+
+
+
+ /*CADASTRAR*/
+
+.cadastro-container{
+
+	background-color: $cor-principal;
+	border-top: 3px solid $cor-base;
+	border-bottom: 3px solid $cor-base;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.texto-cadastro{
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	
+
+		.inputs{
+			float: left;
+			width: 100%;
+			padding: 15px;
+			display: inline-block;
+			margin: 0 0 5px 0;
+		}
+	
+	.inputs::-webkit-input-placeholder {
+  			font-family: $font-secundaria;
+  			color: $cor-principal;
+	}
+
+	.inputs:-ms-input-placeholder {
+  			font-family: $font-secundaria;
+  			color: $cor-principal;
+	}
+
+	.inputs:-moz-placeholder {
+  			font-family: $font-secundaria;
+  			color: $cor-principal;
+	}
+
+	.inputs::-moz-placeholder {
+  			font-family: $font-secundaria;
+  			color: $cor-principal;
+	}
+
+	
+		
+		.botao-cadastrar{
+			display: inline-block;
+			float: left;
+			width: 100%;
+			height: 100px;
+			background-color: $cor-secundaria;
+			color: $cor-base;
+			font-family: $font-principal;
+			text-decoration: none;
+			border: 0;
+		}
+
+		.texto-cadastrar{
+			font-family: $font-principal;
+			color: $cor-secundaria;
+			font-size: 35px;
+		}
+		
+	
+	
+	
+ }
+.link-edite{
+	margin: 10px 0;
+	background-color: darken($cor-secundaria, 30%);
+	padding: 7px 15px;
+	border: 1px solid $cor-principal;
+	color: $cor-base;
+	cursor: pointer;
+}
+
+.link-edit{
+	color: $cor-base;
+	text-decoration: none;
+	font-size: 15px;
+
+}

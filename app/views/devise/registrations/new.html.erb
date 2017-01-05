@@ -1,0 +1,28 @@
+<div class="cadastro-container">
+  
+  <h2 class="texto-cadastrar">Cadastrar</h2>
+  
+  <div class="texto-cadastroa clearfix">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  
+    <%= f.text_field :name, autofocus: true, placeholder: "Nome", class: "inputs" %>
+    <%= f.email_field :email, placeholder: "Email", class: "inputs" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Senha", class: "inputs" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Repita a Senha", class: "inputs" %>
+  
+
+  
+    
+
+  
+    <%= f.submit "Cadastrar", class: "botao-cadastrar" %>
+  
+<% end %>
+
+
+
+</div>
+
+</div>

@@ -14,8 +14,12 @@ $cor-botao-novo: #218b58;
 
 
 .botao-principal{
-	background-color: #e84f62;
+	background-color:$cor-secundaria;
 	padding: 5px 25px;
 	border-radius: 20px;
 	text-decoration: none;
+	transition: all ease-in-out .3s;
+	&:hover{
+		background-color: darken($cor-secundaria, 10%);
+	}
 }

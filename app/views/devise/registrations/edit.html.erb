@@ -1,0 +1,36 @@
+<div class="cadastro-container">
+  <h2 class="texto-cadastrar">Edite <%= resource_name.to_s.humanize %></h2>
+  
+  <div class="texto-cadastroa clearfix">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  
+    <%= f.text_field :name, autofocus: true, placeholder: "Nome", class: "inputs" %>
+    <%= f.email_field :email, placeholder: "Email", class: "inputs" %>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Senha ", class: "inputs" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Repita a Senha ", class: "inputs" %>
+
+    <%= f.password_field :current_password, autocomplete: "off", placeholder: "Confirme sua Senha Atual", class: "inputs" %>
+    
+
+    <%= f.submit "Update", class: "botao-cadastrar" %>
+    <% end %>
+
+<%= button_to "Cancelar Minha Conta", registration_path(resource_name), data: { confirm: "Você tem Certeza?" }, method: :delete, class: "link-edite" %>
+
+
+<%= link_to "Back", :back, class: "link-edit" %>
+ 
+
+</div>
+
+</div>
+
+
+
+
+
