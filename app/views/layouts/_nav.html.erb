@@ -1,0 +1,35 @@
+<div class="nav-bar clearfix">
+	<div class="container-fluid">
+		<%= link_to root_path do %>
+		 <%= image_tag "Logo-AlunoAcademico-v2.png", class: 'logo' %>
+		<% end %>
+		
+
+		<div class="nav clearfix">
+		<% if user_signed_in? %>
+			
+			<ul class="nova-pergunta">
+				<li><a href="" class="link-nav-nova">Nova Pergunta</a></li>
+			</ul>
+				<% if current_user.image.present? %>
+		    		<div class="profile-picture">	<%= image_tag(current_user.image, size: "55")%></div>
+		  		<% end %>
+
+		<ul class="navigation">			
+
+					<li class="links">Olá, <%= link_to current_user.name, edit_user_registration_path, class: 'link-registration'  %></li>
+
+					<li class="links"><%= link_to 'Sair', destroy_user_session_path, method: :delete,  class: ' link_nav_sair' %></li>
+		</ul>
+			<% else %>
+				<ul class="navigation-out">
+					<li class="links"><%= link_to 'Cadastrar', new_user_registration_path, class: 'link_nav_cadastrar' %></li>	
+					<li class="links"><%= link_to 'Login', new_user_session_path, class: 'link_nav_login'	%></li>
+				</ul>
+			<% end %>
+
+		
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,166 @@
+@import 'normalize.scss';
+@import 'grid.scss';
+@import 'variaveis.scss';
+
+body{
+	font-family: 'Noto Sans', sans-serif;
+	color: $cor-base;
+	font-size: 14px;
+	height: 100vh;
+
+}
+
+.nav-bar{
+	background-color: $cor-principal;
+	padding: 25px 15px;
+	.logo{
+		float: left;
+		background-image: Logo-AlunoAcademico-v2;		
+	}
+
+	.nav{
+		width: 100%;
+		max-width: 480px;
+		float: right;
+	}
+	ul.nova-pergunta{
+		float: left;
+		margin-right: 15px;
+		line-height: 30px;
+		li{
+			list-style: none;
+			display: inline-block;
+			.link-nav-nova{
+				text-decoration: none;
+				color: $cor-base;
+				background-color: #218b58;
+				padding: 5px 25px;
+				border-radius: 20px;
+			}
+		}
+	}
+	
+	.profile-picture{
+		display: inline-block;
+		float: left;
+
+		img{
+			border-radius: 50%;
+			border: 2px solid $cor-base;
+		}
+	}
+	
+	.navigation{
+		float: left;
+		/*display: inline-block;
+		padding: 0 0 0 5px;
+		line-height: 30px*/;
+		
+
+
+		li{
+			list-style: none;
+			display: inline-block;
+			
+			}
+
+
+			.links{
+				text-decoration: none;
+				color: $cor-base;
+				margin: 0 5px;
+				a:visited {
+    			color: $cor-base;
+					}
+				
+			}
+
+			.link-registration{
+				color: $cor-base;
+				text-decoration: none;
+			}
+
+			.link_nav_sair{
+				@extend .botao-principal;
+			}
+		}
+
+		.navigation-out{
+			float: right;
+			display: inline-block;
+			padding: 0 0 0 5px;
+			line-height: 30px;
+			li{
+				display: inline-block;
+				a{
+					text-decoration: none;
+					color: $cor-base;
+					margin-right: 15px;
+				}
+				a.link_nav_login{
+					@extend .botao-principal;
+				}
+			}
+		}
+	
+}
+
+// HOME
+
+
+.home-container{
+	height: 80vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	.texto-home{
+		text-align: center;
+		width: 70%;
+		max-width: 1600px;
+		margin: 0 auto;
+
+		h1.titulo-home{
+			font-family: $font-principal;
+			font-size: 65px;
+			color: $cor-principal;
+			margin: 0 0 1.8rem;
+		}
+
+		.botao-home-cadastrar{
+			@extend .botao-principal;
+			font-size: 20px;
+			padding: 10px 35px;
+			border-radius: 30px;
+			color: $cor-base;
+			text-transform: uppercase;
+			/*background-color: $cor-secundaria;*/
+
+		}
+	}
+}
+
+
+ // FOOTER
+
+
+ .footer{
+ 	background-color: $cor-principal;
+ 	position: relative;
+   left:0px;
+   bottom:0px;
+   padding: 10px;
+   color: $cor-base;
+   height:60px;
+   width:100%;
+   display: flex;
+   align-items: center;
+
+   a{
+   	color: $cor-base;
+   	text-decoration: none;
+
+   }
+ }
