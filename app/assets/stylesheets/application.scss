@@ -30,20 +30,28 @@ body{
 		li{
 			list-style: none;
 			display: inline-block;
+			
+
 			.link-nav-nova{
 				text-decoration: none;
-				color: $cor-base;
-				background-color: lighten(#218b58, 10%);
-				
+				color: $cor-base;		
 				padding: 5px 25px;
 				border-radius: 20px;
-				transition: all ease-in-out .3s;
+				background-color: 	#218b58;
+				transition: all .9s ease-in-out;
+				-webkit-transition:all .9s ease-in-out;
+				-moz-transition:all .9s ease-in-out;
+				-o-transition:all .9s ease-in-out;
+				box-shadow: rgba(30, 22, 54, 0.1) 300px 0px 0px 0px inset;
 				&:hover{
-					background-color: #218b58;
+					box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 0px inset;
+					background-color: lighten(#218b58, 10%);
 				}
 			}
 		}
 	}
+
+
 	
 	.profile-picture{
 		display: inline-block;
@@ -146,7 +154,7 @@ body{
 			border-radius: 30px;
 			color: $cor-base;
 			text-transform: uppercase;
-			/*background-color: $cor-secundaria;*/
+			background-color: $cor-secundaria;
 
 		}
 	}
@@ -205,50 +213,87 @@ body{
 			margin: 0 0 5px 0;
 		}
 	
-	.inputs::-webkit-input-placeholder {
-  			font-family: $font-secundaria;
-  			color: $cor-principal;
-	}
+		.inputs::-webkit-input-placeholder {
+	  			font-family: $font-secundaria;
+	  			color: $cor-principal;
+		}
 
-	.inputs:-ms-input-placeholder {
-  			font-family: $font-secundaria;
-  			color: $cor-principal;
-	}
+		.inputs:-ms-input-placeholder {
+	  			font-family: $font-secundaria;
+	  			color: $cor-principal;
+		}
 
-	.inputs:-moz-placeholder {
-  			font-family: $font-secundaria;
-  			color: $cor-principal;
-	}
+		.inputs:-moz-placeholder {
+	  			font-family: $font-secundaria;
+	  			color: $cor-principal;
+		}
 
-	.inputs::-moz-placeholder {
-  			font-family: $font-secundaria;
-  			color: $cor-principal;
-	}
+		.inputs::-moz-placeholder {
+	  			font-family: $font-secundaria;
+	  			color: $cor-principal;
+		}
 
 	
 		
 		.botao-cadastrar{
-			display: inline-block;
-			float: left;
+			padding: 10px;
 			width: 100%;
-			height: 100px;
-			background-color: $cor-secundaria;
+			margin-bottom: 5px;
+			background-color: #218b58 !important;
 			color: $cor-base;
-			font-family: $font-principal;
-			text-decoration: none;
 			border: 0;
+			display: block;
+			cursor: pointer;
+			text-align: center;
+			text-decoration: none;
+			transition: all .9s ease-in-out;
+			-webkit-transition:all .9s ease-in-out;
+			-moz-transition:all .9s ease-in-out;
+			-o-transition:all .9s ease-in-out;
+			box-shadow: rgba(30, 22, 54, 0.1) 1000px 0px 0px 0px inset;
+			&:hover{
+				box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 0px inset;
+				background-color: darken($cor-secundaria, 10%);
+			}
 		}
+
+		.botao-login-devise{
+			@extend .botao-cadastrar;
+			background-color: #218b58 !important;
+			text-align: center;
+			text-decoration: none;
+		}
+
+	 .botao-facebook{
+				@extend .botao-cadastrar;
+				text-align: center;
+				text-decoration: none;
+				background-color: #4267b2 !important;
+			}
+
+			.botao-forget{
+				text-align: left;
+				text-decoration: none;
+				color: $cor-base;
+			}
+	.padding-up{
+		margin-top: 20px;
+	}
+		
+		
+	
+	
+	
+ }
+ 	
 
 		.texto-cadastrar{
 			font-family: $font-principal;
 			color: $cor-secundaria;
 			font-size: 35px;
 		}
-		
-	
-	
-	
- }
+
+
 .link-edite{
 	margin: 10px 0;
 	background-color: darken($cor-secundaria, 30%);

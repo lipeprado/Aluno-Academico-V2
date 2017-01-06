@@ -18,8 +18,13 @@ $cor-botao-novo: #218b58;
 	padding: 5px 25px;
 	border-radius: 20px;
 	text-decoration: none;
-	transition: all ease-in-out .3s;
+	transition: all .9s ease-in-out;
+	-webkit-transition:all .9s ease-in-out;
+	-moz-transition:all .9s ease-in-out;
+	-o-transition:all .9s ease-in-out;
+	box-shadow: rgba(30, 22, 54, 0.1) 300px 0px 0px 0px inset;
 	&:hover{
+		box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 0px inset;
 		background-color: darken($cor-secundaria, 10%);
 	}
 }
